@@ -1,0 +1,217 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ie.cm.fragments.EditFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/coffeeShopTextView"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="The Description..."
+            android:textColor="@color/bannerBGColor"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <Button
+            android:id="@+id/saveCoffeeBtn"
+            style="@android:style/Holo.Light.ButtonBar"
+            android:layout_width="369dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="8dp"
+            android:drawableTop="@drawable/ic_save_coffee"
+            android:onClick="update"
+            android:text="@string/updateCoffeeBtnLbl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/coffeeRatingBar"
+            app:layout_constraintTop_toBottomOf="@+id/coffeeRatingBar"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintVertical_bias="0.054" />
+
+        <RatingBar
+            android:id="@+id/coffeeRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:numStars="5"
+            android:progressTint="@color/bannerBGColor"
+            android:rating="2"
+            android:stepSize="0.5"
+            app:layout_constraintLeft_toLeftOf="@+id/ratingTextView"
+            app:layout_constraintTop_toBottomOf="@+id/ratingTextView"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textShortMessage"
+            app:layout_constraintLeft_toLeftOf="@+id/shopEditText"
+            app:layout_constraintRight_toRightOf="@+id/shopEditText"
+            app:layout_constraintTop_toBottomOf="@+id/barTextView"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            tools:ignore="LabelFor">
+
+            <requestFocus />
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/coffeeNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="The Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/favouriteImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <ImageView
+            android:id="@+id/favouriteImageView"
+            android:layout_width="53dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="19dp"
+            android:onClick="toggle"
+            android:src="@drawable/ic_favourite_off"
+            app:layout_constraintBottom_toBottomOf="@+id/coffeeNameTextView"
+            app:layout_constraintRight_toRightOf="@+id/coffeeShopTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="ContentDescription"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/shopEditText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textShortMessage"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toRightOf="@+id/priceEditText"
+            app:layout_constraintRight_toRightOf="@+id/priceEditText"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:ignore="LabelFor"></EditText>
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/coffeeRatingLbl"
+            android:textColor="@color/appFontColor"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceEditText"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:gravity="top"
+            android:text="@string/coffeeNameLbl"
+            android:textColor="@color/appFontColor"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameEditText"
+            app:layout_constraintLeft_toLeftOf="@+id/shopTextView"
+            app:layout_constraintRight_toLeftOf="@+id/nameEditText"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1" />
+
+        <EditText
+            android:id="@+id/priceEditText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="113dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintLeft_toLeftOf="@+id/barTextView"
+            app:layout_constraintRight_toRightOf="@+id/favouriteImageView"
+            app:layout_constraintTop_toBottomOf="@+id/shopEditText"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/shopTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="11dp"
+            android:text="@string/coffeeShopLbl"
+            android:textColor="@color/appFontColor"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shopEditText"
+            app:layout_constraintRight_toLeftOf="@+id/shopEditText"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintRight_creator="1" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="@string/coffeePriceLbl"
+            android:textColor="@color/appFontColor"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/shopTextView"
+            app:layout_constraintRight_toRightOf="@+id/shopTextView"
+            app:layout_constraintTop_toBottomOf="@+id/shopTextView"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <TextView
+            android:id="@+id/barTextView"
+            style="@style/banner"
+            android:layout_width="383dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="7dp"
+            android:text="@string/coffeeDetailsLbl"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coffeeShopTextView"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginStart="1dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

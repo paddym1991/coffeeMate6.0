@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "308327159814",
+    "project_id": "coffeemate-app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308327159814:android:d15577af3f2220ae",
+        "android_client_info": {
+          "package_name": "ie.cm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308327159814-o4h8pbhv9d4bahtih691j703co368u8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ie.cm",
+            "certificate_hash": "2babf117435b237b3328fd9a26e2358fe815bcd0"
+          }
+        },
+        {
+          "client_id": "308327159814-c6bsi5uoi4mgi97ki3p0hsmaqr2jqk17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0L6k2SyzvZTBwihOspl-9wu-GGHHaZCI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

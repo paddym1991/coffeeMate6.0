@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    style="@style/appLayoutTheme"
+    android:layout_width="fill_parent"
+    android:layout_height="46dp"
+    android:background="@drawable/background_activated"
+    android:padding="8dp" >
+
+    <ImageView
+        android:id="@+id/RowImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp"
+        android:contentDescription="fav"
+        android:gravity="center_vertical"
+        android:src="@drawable/ic_favourite_off"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="fav"
+        android:src="@android:drawable/ic_delete"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/rowCoffeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/RowImage"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/RowImage"
+        android:gravity="center_vertical"
+        android:text="Coffee Name"
+        android:textColor="@color/appFooterFontColor"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/rowCoffeeShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/RowImage"
+        android:layout_alignLeft="@+id/rowCoffeeName"
+        android:gravity="center_vertical"
+        android:text="Coffee Shop"
+        android:textColor="@color/textBGColor"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SmallSp" />
+
+    <TextView
+        android:id="@+id/rowRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgDelete"
+        android:layout_marginRight="35dp"
+        android:layout_toLeftOf="@+id/imgDelete"
+        android:gravity="center_vertical"
+        android:text="5.0 *"
+        android:textColor="@color/textBGColor"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SmallSp" />
+
+    <TextView
+        android:id="@+id/rowPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rowRating"
+        android:layout_alignTop="@+id/imgDelete"
+        android:gravity="center_vertical"
+        android:text="€3.99"
+        android:textColor="@color/appFooterFontColor"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
