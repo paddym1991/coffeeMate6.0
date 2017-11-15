@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
-
 android {
     compileSdkVersion 25
     buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "ie.cm"
-        minSdkVersion 21
+        minSdkVersion 22
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -21,22 +20,19 @@ android {
 }
 
 dependencies {
-
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support:support-v4:25.0.0'
-    compile 'com.android.support:design:25.0.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':volley')
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.android.support:design:25.2.0'
     compile 'com.makeramen:roundedimageview:2.2.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.google.android.gms:play-services-auth:11.0.2'
+    compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.google.android.gms:play-services-location:11.0.2'
     testCompile 'junit:junit:4.12'
-
-    compile project(':volley')
-    compile 'com.google.code.gson:gson:2.4' // for Googles Gson JSON Parser
-
-    compile 'com.google.android.gms:play-services-location:9.0.0'
-    compile 'com.google.android.gms:play-services-auth:9.0.0'
-
 }
+
 
 apply plugin: 'com.google.gms.google-services'

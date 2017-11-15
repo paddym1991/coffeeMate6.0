@@ -39,4 +39,7 @@
     <string name="deleteCoffeesLbl">Delete Coffee\'s</string>
 
     <string name="linktoRegister">New to CoffeeMate?\n Register at\n <a href='http://coffeemateweb.herokuapp.com'>http://coffeemateweb.herokuapp.com</a></string>
+
+    <string name="title_map">Map</string>
+    <string name="google_maps_key">AIzaSyAveRb2e5DG4WMFcY-2g2AalWbxhCHpJ0k</string>
 </resources>

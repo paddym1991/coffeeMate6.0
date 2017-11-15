@@ -163,6 +163,8 @@ public class Home extends AppCompatActivity
 
         } else if (id == R.id.nav_camera) {
 
+        } else if (id == R.id.nav_map) {
+            startActivity(new Intent(this, Map.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
